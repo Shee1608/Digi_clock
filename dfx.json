@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "digi_clock_backend": {
+      "main": "src/digi_clock_backend/main.mo",
+      "type": "motoko"
+    },
+    "digi_clock_frontend": {
+      "dependencies": [
+        "digi_clock_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/digi_clock_frontend/src/index.html"
+      },
+      "source": [
+        "src/digi_clock_frontend/assets",
+        "dist/digi_clock_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
